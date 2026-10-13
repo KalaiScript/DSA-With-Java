@@ -1,12 +1,12 @@
 # DSA-With-Java
 
-A Java-based repository for learning and practicing Data Structures and Algorithms (DSA) with clean, beginner-friendly implementations.
+A Java-based repository for learning and practicing Data Structures and Algorithms (DSA) with clean, beginner-friendly implementations..
 
 ## Overview
 
 This repository is designed to help students and developers strengthen their problem-solving and coding skills through practical Java implementations of essential DSA concepts.
 
-The project currently includes graph-related implementations and will expand over time to cover the full spectrum of data structures and algorithms.
+The project currently includes graph-related implementations and will expand over time to cover the full spectrum of data structures, and algorithms.
 
 More efficient code and easy to understand the iteration.
 
