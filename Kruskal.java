@@ -22,10 +22,11 @@ public class Kruskal {
         int rootB = find(b);
 
         if (rootA == rootB) {
-            return false;
+            return false; // Cycle formed
         }
 
         if (parent[rootA] > parent[rootB]) {
+          System.out.println("HI");
             int temp = rootA;
             rootA = rootB;
             rootB = temp;
@@ -33,58 +34,41 @@ public class Kruskal {
 
         parent[rootA] = parent[rootA] + parent[rootB];
         parent[rootB] = rootA;
+
         return true;
     }
 
-    static void kruskal(int[][] edges) {
+    public static void main(String[] args) {
         initialize();
 
-        for (int i = 0; i < edges.length - 1; i++) {
-            for (int j = i + 1; j < edges.length; j++) {
-                if (edges[i][2] > edges[j][2]) {
-                    int[] temp = edges[i];
-                    edges[i] = edges[j];
-                    edges[j] = temp;
-                }
-            }
-        }
+        int[][] edges = {
+            {1, 2},
+            {2,3},
+            {7,1},
+            {3, 4},
+           // {4, 3},
+            {5, 6},
+            {7, 8},
+            {2,4},
+            // {2,7},
+            {4,7}
+        };
 
-        int edgeCount = 0;
-        int totalWeight = 0;
-
-        System.out.println("Edges in the minimum spanning forest:");
         for (int[] edge : edges) {
-            if (union(edge[0], edge[1])) {
-                System.out.println(edge[0] + " - " + edge[1] + " : " + edge[2]);
-                totalWeight += edge[2];
-                edgeCount++;
+            if (!union(edge[0], edge[1])) {
+                System.out.println(
+                    "Cycle formed at edge: "
+                    + edge[0] + " - " + edge[1]
+                );
+                return;
             }
         }
 
-        System.out.println("Total weight: " + totalWeight);
-        if (edgeCount != 7) {
-            System.out.println("Graph is disconnected; a minimum spanning tree does not exist.");
-        }
+        System.out.println("No cycle");
 
         System.out.println("Parent array:");
         for (int i = 1; i <= 8; i++) {
             System.out.print(parent[i] + " ");
         }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        int[][] edges = {
-            {1, 2, 4},
-            {2, 3, 2},
-            {7, 1, 3},
-            {3, 4, 6},
-            {5, 6, 1},
-            {7, 8, 5},
-            {2, 4, 3},
-            {4, 7, 7}
-        };
-
-        kruskal(edges);
     }
 }
