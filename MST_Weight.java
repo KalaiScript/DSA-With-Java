@@ -50,7 +50,7 @@ public class MST_Weight {
 				{ 2, 4, 9 }
 		};
 
-		// Sort by weight using bubble sort.
+		// Sort by weight using bubble sort...
 		for (int i = 0; i < edges.length - 1; i++) {
 			for (int j = 0; j < edges.length - 1 - i; j++) {
 				if (edges[j][2] > edges[j + 1][2]) {
@@ -85,6 +85,7 @@ public class MST_Weight {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("Program started...");
 		MST_Weight obj = new MST_Weight();
 		obj.run();
 	}
