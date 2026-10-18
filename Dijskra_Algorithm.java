@@ -1,20 +1,20 @@
 import java.util.Arrays;
 
-class GraphMatrix {
+public class Dijskra_Algorithm {
 
     int[][] matrix;
     int vertex;
 
-    GraphMatrix(int vertex) {
+    public Dijskra_Algorithm(int vertex) {
         this.vertex = vertex;
         matrix = new int[vertex][vertex];
     }
 
-    void add(int u, int v, int weight) {
+    public void add(int u, int v, int weight) {
         matrix[u][v] = weight;
     }
 
-    void display() {
+    public void display() {
         for (int i = 0; i < vertex; i++) {
             for (int j = 0; j < vertex; j++) {
                 System.out.print(matrix[i][j] + " ");
@@ -23,7 +23,7 @@ class GraphMatrix {
         }
     }
 
-    void dijkstra(int source) {
+    public void dijkstra(int source) {
         int[] distance = new int[vertex];
         boolean[] visited = new boolean[vertex];
         Arrays.fill(distance, Integer.MAX_VALUE);
@@ -62,7 +62,7 @@ class GraphMatrix {
         }
     }
 
-    boolean cycleDFS(int current, boolean[] visited, boolean[] path) {
+    public boolean cycleDFS(int current, boolean[] visited, boolean[] path) {
         visited[current] = true;
         path[current] = true;
 
@@ -82,7 +82,7 @@ class GraphMatrix {
         return false;
     }
 
-    boolean hasCycle() {
+    public boolean hasCycle() {
         boolean[] visited = new boolean[vertex];
         boolean[] path = new boolean[vertex];
 
@@ -99,7 +99,7 @@ class GraphMatrix {
     }
 
     public static void main(String[] args) {
-        GraphMatrix g = new GraphMatrix(6);
+        Dijskra_Algorithm g = new Dijskra_Algorithm(6);
 
         g.add(0, 1, 2); // A -> B, weight 2
         g.add(0, 5, 4); // A -> H, weight 4
@@ -117,5 +117,11 @@ class GraphMatrix {
         g.add(3, 4, 3); // D -> E, weight 3
 
         g.dijkstra(5);
+    }
+}
+
+class GraphMatrix extends Dijskra_Algorithm {
+    GraphMatrix(int vertex) {
+        super(vertex);
     }
 }
