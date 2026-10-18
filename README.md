@@ -6,7 +6,7 @@ A Java-based repository for learning and practicing Data Structures and Algorith
 
 This repository is designed to help students and developers strengthen their problem-solving and coding skills through practical Java implementations of essential DSA concepts.
 
-The project currently includes graph-related implementations and will expand over time to cover the full spectrum of data structures, and algorithms.
+The project currently includes graph and binary-tree implementations and will expand over time to cover the full spectrum of data structures, and algorithms.
 
 More efficient code and easy to understand the iteration.
 
@@ -47,6 +47,7 @@ This repository will include implementations and explanations for:
 
 The repository currently includes:
 
+- Binary-tree operations such as minimum/maximum value, leaf sum/count, balance checking, and lowest common ancestor
 - Graph implementation in Java
 - Graph operations such as:
   - adding edges
@@ -59,6 +60,7 @@ The repository currently includes:
 
 ```text
 DSA-With-Java/
+├── BinaryTree.java
 ├── Graphs.java
 ├── README.md
 └── future DSA files and folders
