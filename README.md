@@ -61,7 +61,20 @@ Key concepts covered:
 
 This is a great beginner-friendly graph example because the adjacency matrix is easy to visualize and understand before moving to more complex graph representations.
 
-### 4) `Dijskra_Algorithm.java`
+### 4) `Graph_arraylist.java`
+
+This file builds an undirected graph using an adjacency list backed by Java `ArrayList` collections.
+
+Key concepts covered:
+
+- Storing each vertex's neighbors in a list
+- Adding and displaying undirected edges
+- Depth-first traversal (DFS) using recursion
+- Breadth-first traversal (BFS) using a queue
+
+Compared with an adjacency matrix, this representation stores only existing edges, making it useful for sparse graphs.
+
+### 5) `Dijskra_Algorithm.java`
 
 This file demonstrates Dijkstra's shortest-path algorithm on a directed weighted graph.
 
@@ -78,7 +91,7 @@ The class name is spelled `Dijskra_Algorithm` intentionally to match the file na
 
 This program helps learners see how shortest-path problems are solved in weighted graphs and how greedy choices work in Dijkstra's algorithm.
 
-### 5) `TopologicalSort.java`
+### 6) `TopologicalSort.java`
 
 This file shows a directed graph and demonstrates topological sorting.
 
@@ -95,7 +108,7 @@ Key concepts covered:
 
 Topological sorting is used in scheduling, dependency resolution, and task ordering. This example is especially useful for understanding how nodes with no incoming dependency can be processed first.
 
-### 6) `MinimumSpanTree.java`
+### 7) `MinimumSpanTree.java`
 
 This file implements a Prim-style minimum spanning tree (MST) solution using a weighted adjacency matrix.
 
@@ -109,7 +122,7 @@ Key concepts covered:
 
 A minimum spanning tree connects all vertices with the least total edge weight while avoiding cycles. This example demonstrates the greedy strategy behind Prim's algorithm.
 
-### 7) `MST_Weight.java`
+### 8) `MST_Weight.java`
 
 This file implements Kruskal's algorithm with a disjoint-set (union-find) structure.
 
@@ -125,7 +138,7 @@ Key concepts covered:
 
 Kruskal's algorithm is another classic MST approach. Instead of growing a tree from one source vertex, it processes edges by increasing weight and adds those that do not form cycles.
 
-### 8) `Kruskal.java`
+### 9) `Kruskal.java`
 
 This file is a simpler disjoint-set example that focuses on detecting cycles while processing edges.
 
@@ -162,6 +175,7 @@ After compilation, run any class with:
 java BinaryTree
 java SegmentTree
 java Graphs
+java Graph_arraylist
 java Dijskra_Algorithm
 java TopologicalSort
 java MinimumSpanTree
@@ -183,7 +197,7 @@ A suggested order for studying these examples is:
 
 1. `BinaryTree.java` — understand recursion and tree structure
 2. `SegmentTree.java` — learn aggregate range queries and lazy updates
-3. `Graphs.java` — understand graph representation and traversal
+3. `Graphs.java` and `Graph_arraylist.java` — compare graph representations and traversals
 4. `TopologicalSort.java` — learn directed graph dependencies
 5. `Dijskra_Algorithm.java` — understand weighted shortest paths
 6. `MinimumSpanTree.java` and `MST_Weight.java` — learn spanning tree algorithms
