@@ -1,191 +1,59 @@
-# DSA With Java
+# Data Structures and Algorithms in Java
 
-This repository is a hands-on Java practice set for learning core data structures and algorithms. Each file contains a small, self-contained program with a `main` method and sample input, making it easy to compile and run examples directly in Java.
+A collection of small Java programs for learning common data structures and algorithms. Each example includes sample data and a `main` method, so you can compile and run it directly.
 
-The goal is to help beginners understand how common DSA concepts work in code, not just memorize theory. Each implementation focuses on clarity and correctness, using simple arrays, matrices, recursion and custom classes instead of advanced libraries.
+The implementations favor straightforward Java code to make the underlying ideas easier to follow.
 
-## What is included
+## Topics and examples
 
-This repository covers:
+| File | What it demonstrates |
+| --- | --- |
+| `BinaryTree.java` | Binary-tree operations, including minimum and maximum values, leaf totals and counts, balance checks, lowest common ancestor, and iterative Fibonacci |
+| `SegmentTree.java` | A segment tree built from a binary tree's preorder values; sum, minimum, and maximum range queries; lazy range updates |
+| `Graphs.java` | An undirected graph using an adjacency matrix, with edge operations and DFS/BFS traversals |
+| `Graph_arraylist.java` | An undirected graph using `ArrayList` adjacency lists, with DFS and BFS |
+| `graph_linkedList.java` | An undirected graph using linked-list adjacency lists, with DFS and BFS |
+| `Dijskra_Algorithm.java` | Dijkstra's shortest-path algorithm for a directed, weighted graph, plus directed-cycle detection |
+| `TopologicalSort.java` | Topological sorting of a directed graph using DFS and Kahn's algorithm |
+| `MinimumSpanTree.java` | Prim-style minimum spanning tree construction using a weighted adjacency matrix |
+| `MST_Weight.java` | Kruskal's minimum spanning tree algorithm with a disjoint-set (union-find) structure |
+| `Kruskal.java` | Disjoint-set operations and cycle detection in a graph |
 
-- Binary trees and recursive tree operations
-- Graph representations and graph traversal
-- Shortest-path algorithms
-- Topological sorting
-- Minimum spanning tree algorithms
-- Disjoint-set / union-find concepts
-- Cycle detection in graphs and sets
-
-## Project files and full descriptions
-
-### 1) `BinaryTree.java`
-
-This file implements a binary tree and demonstrates several important tree operations.
-
-Key concepts covered:
-
-- Tree node creation with left and right child pointers
-- Finding the minimum and maximum value in a tree
-- Summing values present in leaf nodes
-- Counting the number of leaf nodes
-- Checking whether the tree is balanced
-- Finding the lowest common ancestor (LCA) of two nodes
-- Computing Fibonacci numbers using an iterative dynamic-programming approach
-
-This example is useful for learning how recursion works on hierarchical data structures and how tree problems can be reduced into smaller subproblems.
-
-### 2) `SegmentTree.java`
-
-This file builds a segment tree over the binary tree's preorder traversal and demonstrates range queries and lazy range updates.
-
-Key concepts covered:
-
-- Building sum, minimum, and maximum segment-tree aggregates
-- Querying inclusive, zero-based ranges
-- Adding a value to every item in a range with lazy propagation
-- Sizing storage from the input and validating query ranges
-
-### 3) `Graphs.java`
-
-This file builds an undirected, unweighted graph using an adjacency matrix.
-
-Key concepts covered:
-
-- Graph initialization with a matrix representation
-- Adding and removing edges
-- Checking whether an edge exists between two vertices
-- Displaying the adjacency matrix and adjacency list style output
-- Depth-first traversal (DFS)
-- Breadth-first traversal (BFS)
-- Graph counting and vertex display operations
-
-This is a great beginner-friendly graph example because the adjacency matrix is easy to visualize and understand before moving to more complex graph representations.
-
-### 4) `Graph_arraylist.java`
-
-This file builds an undirected graph using an adjacency list backed by Java `ArrayList` collections.
-
-Key concepts covered:
-
-- Storing each vertex's neighbors in a list
-- Adding and displaying undirected edges
-- Depth-first traversal (DFS) using recursion
-- Breadth-first traversal (BFS) using a queue
-
-Compared with an adjacency matrix, this representation stores only existing edges, making it useful for sparse graphs.
-
-### 5) `graph_linkedList.java`
-
-This file builds an undirected graph with a linked list of neighbors for each vertex.
-
-Key concepts covered:
-
-- Representing each adjacency list with linked nodes
-- Adding and displaying undirected edges
-- Depth-first traversal (DFS) using recursion
-- Breadth-first traversal (BFS) using an array-backed queue
-
-This example provides a linked-node alternative to `Graph_arraylist.java` and stores only existing edges.
-
-### 6) `Dijskra_Algorithm.java`
-
-This file demonstrates Dijkstra's shortest-path algorithm on a directed weighted graph.
-
-Key concepts covered:
-
-- Weighted graph representation using a 2D matrix
-- Adding directed edges with associated weights
-- Finding the shortest distance from a selected source vertex
-- Visiting the nearest unvisited node repeatedly
-- Relaxing edges to update shortest distances
-- Cycle detection in a directed graph using DFS
-
-The class name is spelled `Dijskra_Algorithm` intentionally to match the file name and to preserve the original project naming. The example also includes a helper `GraphMatrix` class.
-
-This program helps learners see how shortest-path problems are solved in weighted graphs and how greedy choices work in Dijkstra's algorithm.
-
-### 7) `TopologicalSort.java`
-
-This file shows a directed graph and demonstrates topological sorting.
-
-Key concepts covered:
-
-- Directed graph using adjacency matrix
-- Checking whether an edge exists between two vertices
-- Displaying vertices and adjacency information
-- DFS-based ordering
-- BFS-based traversal
-- In-degree counting for each node
-- Kahn's algorithm for topological sort
-- Detecting cycles when a valid topological ordering is impossible
-
-Topological sorting is used in scheduling, dependency resolution, and task ordering. This example is especially useful for understanding how nodes with no incoming dependency can be processed first.
-
-### 8) `MinimumSpanTree.java`
-
-This file implements a Prim-style minimum spanning tree (MST) solution using a weighted adjacency matrix.
-
-Key concepts covered:
-
-- Weighted graph creation
-- Selecting the smallest edge that connects visited and unvisited vertices
-- Growing a spanning tree incrementally
-- Tracking total MST weight
-- Detecting disconnected graphs
-
-A minimum spanning tree connects all vertices with the least total edge weight while avoiding cycles. This example demonstrates the greedy strategy behind Prim's algorithm.
-
-### 9) `MST_Weight.java`
-
-This file implements Kruskal's algorithm with a disjoint-set (union-find) structure.
-
-Key concepts covered:
-
-- Disjoint-set initialization
-- Parent tracking and path compression
-- Union operation for connecting components
-- Cycle detection during edge processing
-- Sorting edges by weight
-- Selecting a minimum spanning tree for a weighted graph
-- Calculating the total cost of the MST
-
-Kruskal's algorithm is another classic MST approach. Instead of growing a tree from one source vertex, it processes edges by increasing weight and adds those that do not form cycles.
-
-### 10) `Kruskal.java`
-
-This file is a simpler disjoint-set example that focuses on detecting cycles while processing edges.
-
-Key concepts covered:
-
-- Parent array representation of disjoint sets
-- Finding the root of a node
-- Union of two sets
-- Detecting when an edge connects vertices already in the same set
-- Identifying a cycle in a graph
-
-This is a compact and beginner-friendly introduction to the union-find data structure, which is foundational for Kruskal's MST algorithm.
+> **Note:** `Dijskra_Algorithm.java` uses the spelling `Dijskra_Algorithm` in its filename and class name. Keep this spelling when compiling or running the example.
 
 ## Requirements
 
-- Java Development Kit (JDK) installed and available on your `PATH`
-- A terminal or command prompt to compile and run Java files
+- A Java Development Kit (JDK) installed and available on your `PATH`.
+- PowerShell or another terminal.
 
-## Compile all programs
+To check that Java is installed, run:
 
-From the repository root, run:
+```powershell
+java -version
+javac -version
+```
+
+## Compile the examples
+
+Open a terminal in the repository folder and compile the Java source files:
 
 ```powershell
 javac *.java
 ```
 
-This will compile all Java source files in the folder into `.class` files.
+The compiler creates `.class` files in the same folder.
 
 ## Run an example
 
-After compilation, run any class with:
+Run a class by passing its name to `java` (without the `.java` extension). For example:
 
 ```powershell
 java BinaryTree
+```
+
+Other available examples include:
+
+```powershell
 java SegmentTree
 java Graphs
 java Graph_arraylist
@@ -197,26 +65,24 @@ java MST_Weight
 java Kruskal
 ```
 
-Each program contains its own sample dataset and prints output to demonstrate the concept being implemented.
+Each program uses its own sample data and prints results to the terminal.
+
+## Suggested learning order
+
+1. `BinaryTree.java` — learn tree structure and recursive operations.
+2. `SegmentTree.java` — explore range queries and lazy updates.
+3. `Graphs.java`, `Graph_arraylist.java`, and `graph_linkedList.java` — compare graph representations and traversals.
+4. `TopologicalSort.java` — understand ordering and dependencies in directed graphs.
+5. `Dijskra_Algorithm.java` — study shortest paths in weighted graphs.
+6. `MinimumSpanTree.java` and `MST_Weight.java` — compare Prim's and Kruskal's approaches to minimum spanning trees.
+7. `Kruskal.java` — review disjoint sets and cycle detection.
 
 ## Notes
 
-- The graph examples use zero-based indexing for vertices in many cases.
-- The union-find examples operate on integer node IDs and are easier to follow when seen as small graph structures.
-- Some files are intentionally simple so the underlying algorithm is easier to understand.
-
-## Learning path
-
-A suggested order for studying these examples is:
-
-1. `BinaryTree.java` — understand recursion and tree structure
-2. `SegmentTree.java` — learn aggregate range queries and lazy updates
-3. `Graphs.java`, `Graph_arraylist.java`, and `graph_linkedList.java` — compare graph representations and traversals
-4. `TopologicalSort.java` — learn directed graph dependencies
-5. `Dijskra_Algorithm.java` — understand weighted shortest paths
-6. `MinimumSpanTree.java` and `MST_Weight.java` — learn spanning tree algorithms
-7. `Kruskal.java` — understand union-find in isolation
+- Graph vertices are commonly numbered starting at `0`.
+- The union-find examples use integer node identifiers.
+- These examples are intended for learning; implementations may prioritize clarity over production-scale performance.
 
 ## Contributing
 
-To contribute, add new Java examples that teach a specific algorithm or data structure clearly and update this README to document the new program and its purpose.
+Contributions are welcome. Add a focused Java example, include sample data that makes it easy to try, and update the table above with a brief description.
