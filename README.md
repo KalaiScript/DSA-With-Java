@@ -2,7 +2,7 @@
 
 This repository is a hands-on Java practice set for learning core data structures and algorithms. Each file contains a small, self-contained program with a `main` method and sample input, making it easy to compile and run examples directly in Java.
 
-The goal is to help beginners understand how common DSA concepts work in code, not just memorize theory. Each implementation focuses on clarity and correctness, using simple arrays, matrices, recursion, and custom classes instead of advanced libraries.
+The goal is to help beginners understand how common DSA concepts work in code, not just memorize theory. Each implementation focuses on clarity and correctness, using simple arrays, matrices, recursion and custom classes instead of advanced libraries.
 
 ## What is included
 
@@ -219,4 +219,4 @@ A suggested order for studying these examples is:
 
 ## Contributing
 
-To contribute, add new Java examples that teach a specific algorithm or data structure clearly, and update this README to document the new program and its purpose.
+To contribute, add new Java examples that teach a specific algorithm or data structure clearly and update this README to document the new program and its purpose.
